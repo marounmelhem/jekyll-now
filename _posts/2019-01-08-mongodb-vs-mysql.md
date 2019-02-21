@@ -15,8 +15,8 @@
 '13': S
 '14': Q
 '15': L
+published: true
 ---
-
 ## Comparaison en tant que: 
 
   - performance
@@ -24,8 +24,3 @@
   - facilité d'utilisation
   
 ## [MongoDB vs MySQL](c1.maroun.me)
-
-
-
-
-
