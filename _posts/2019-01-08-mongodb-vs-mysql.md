@@ -24,7 +24,9 @@ When choosing a database for your project, one of the biggest and most important
 While both options can get the job done, there are mentionable key differences that each developer must keep in mind.
 
 
+
 **What we'll be doing?**
+
 - What are the benefits of using MongoDB
 - How to setup MongoDB
 - MongoDB tools you should use
@@ -32,5 +34,8 @@ While both options can get the job done, there are mentionable key differences t
 - MongoDB vs mySQL (head to head comparison)
 - Live MongoDB vs mySQL performance, scalability, ease of use test using: Laravel framework with VueJS
 
+
+
 **Is the test live?**
+
 YES! the test along with all used code can be checked through [c1.maroun.me](c1.maroun.me)
