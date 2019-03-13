@@ -64,12 +64,14 @@ Unlike RDBMS databases, MongoDB is easy to scale since it requires a lot less re
 ## How to setup MongoDB on Ubuntu 16.04 (using php)
 
 **Login via ssh**
-
 ![1.png]({{site.baseurl}}/_posts/1.png)
 
-**Create site folder and configure permissions**
 
+**Create site folder and configure permissions**
 ![3.png]({{site.baseurl}}/_posts/3.png)
 
+
+**Create site conf in /etc/apache2/sites-available**
+![5.png]({{site.baseurl}}/_posts/5.png)
 
 
