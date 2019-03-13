@@ -1,11 +1,11 @@
 ---
 published: false
 ---
-## Overview: 
+## Overview
 
 **What is MongoDB?**
 
-_As per the official MongoDB documentation:_
+_As per the official MongoDB documentation_
 
 > _ MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need_
 
@@ -32,7 +32,7 @@ While both options can get the job done, there are mentionable key differences t
 - MongoDB tools you should use
 - Let's talk about mySQL
 - MongoDB vs mySQL (head to head comparison)
-- Live MongoDB vs mySQL performance, scalability, ease of use test using: Laravel framework with VueJS
+- Live MongoDB vs mySQL performance, scalability, ease of use test using Laravel framework with VueJS
 
 
 
@@ -77,4 +77,3 @@ IMAGE 1
 **Create and configure your test site**
 
 IMAGE 2
-
