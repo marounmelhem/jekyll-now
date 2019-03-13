@@ -28,9 +28,9 @@ While both options can get the job done, there are mentionable key differences t
 **What we'll be talking about?**
 
 - What are the benefits of using MongoDB
-- How to setup MongoDB (we'll test with php)
+- How to setup MongoDB on Ubuntu 16.04 (using php)
 - MongoDB tools you should use
-- Let's talk about mySQL (we'll test with php)
+- Let's talk about mySQL
 - MongoDB vs mySQL (head to head comparison)
 - Live MongoDB vs mySQL performance, scalability, ease of use test using: Laravel framework with VueJS
 
@@ -38,7 +38,7 @@ While both options can get the job done, there are mentionable key differences t
 
 **Is the test live?**
 
-YES! the test along with all used code can be checked through [c1.maroun.me](c1.maroun.me)
+YES! the test along with all used code can be checked through [c1.maroun.xyz](c1.maroun.xyz)
 
 
 
@@ -64,3 +64,17 @@ Unlike RDBMS databases, MongoDB is easy to scale since it requires a lot less re
 
 
 **Uses internal memory for storing the (windowed) working set, enabling faster access of data.**
+
+
+
+## How to setup MongoDB on Ubuntu 16.04 (using php)
+
+**Login via ssh**
+
+IMAGE 1
+
+
+**Create and configure your test site**
+
+IMAGE 2
+
