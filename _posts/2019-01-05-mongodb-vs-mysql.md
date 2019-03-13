@@ -75,3 +75,5 @@ Unlike RDBMS databases, MongoDB is easy to scale since it requires a lot less re
 ![5.png]({{site.baseurl}}/_posts/5.png)
 
 
+**Enable site in /etc/apache2/sites-available**
+![7.png]({{site.baseurl}}/_posts/7.png)
