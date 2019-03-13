@@ -65,7 +65,11 @@ Unlike RDBMS databases, MongoDB is easy to scale since it requires a lot less re
 
 **Login via ssh**
 
+![1.png]({{site.baseurl}}/_posts/1.png)
+
+**Create site folder and configure permissions**
+
+![3.png]({{site.baseurl}}/_posts/3.png)
 
 
-**Create and configure your test site**
 
