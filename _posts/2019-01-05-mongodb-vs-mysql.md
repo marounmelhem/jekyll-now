@@ -77,3 +77,31 @@ Unlike RDBMS databases, MongoDB is easy to scale since it requires a lot less re
 
 **Enable site in /etc/apache2/sites-available**
 ![7.png]({{site.baseurl}}/_posts/7.png)
+
+
+**Add MongoDB Repository**
+
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+```
+
+```
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+```
+
+![8.png]({{site.baseurl}}/_posts/8.png)
+
+
+**INSTALL MONGODB**
+
+```
+sudo apt update
+sudo apt install mongodb-org mongodb-org-server
+```
+
+if you face the "E: Unable to locate package mongodb-org  //This is the error" error, check:
+https://stackoverflow.com/a/28966356/3766571
+
+![9.png]({{site.baseurl}}/_posts/9.png)
+
+
