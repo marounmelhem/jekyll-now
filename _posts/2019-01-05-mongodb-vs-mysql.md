@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 _As per the official MongoDB documentation_
 
