@@ -25,8 +25,9 @@ While both options can get the job done, there are mentionable key differences t
 - How to setup MongoDB on Ubuntu 16.04 (using php)
 - MongoDB tools you should use
 - Let's talk about mySQL
-- MongoDB vs mySQL (head to head comparison)
-- Live MongoDB vs mySQL performance, scalability, ease of use test using Laravel framework with VueJS
+- MongoDB vs MySQL
+- MongoDB/MySQL Coding example
+- MongoDB vs MySQL live tests: speed, performance and optimization
 
 
 
@@ -183,9 +184,62 @@ sudo dpkg -i robomongo-0.8.5-x86_64.deb
 robomongo
 ```
 
-__NB: MongoDB is available for Linux, MacOS and Windows__
+__NB:__
+__-MongoDB is available for Linux, MacOS and Windows__
+__-Another option that can be used is MongoDB Compass__
 
 ![13.png](http://c1.maroun.xyz/github_screenshots/13.png)
+
+
+## Let's talk about MySQL
+
+**A note about SQL**
+
+SQL on the other hand stands for structured query language.
+
+SQL is the standardized language used to access the database.
+
+SQL contains three parts:
+
+- Data definition language includes statements that help you define the database and its objects, e.g., tables, views, triggers, stored procedures, etc.
+- Data manipulation language contains statements that allow you to update and query data.
+- Data control language allows you to grant the permissions to a user to access specific data in the database.
+
+**What about MySQL?**
+
+MySQL is a full-featured open-source relational database management system (RDBMS) that was originally built by MySQL AB and currently owned by Oracle Corporation. It stores data in tables that are grouped into a database, uses Structured Query Language (SQL) to access data and such commands as ‘SELECT’, ‘UPDATE’, ‘INSERT’ and ‘DELETE’ to manage it. Related information can be stored in different tables, but the usage of JOIN operation allows you to correlate it, perform queries across various tables and minimize the chance of data duplication.
+
+MySQL is compatible with nearly all operating systems, namely Windows, Linux, Unix, Apple, FreeBSD and many others. It supports various storage engines, like InnoDB (it is the default one), Federated, MyISAM, Memory, CSV, Archive, Blackhole and Merge.
+
+
+## MongoDB vs MySQL (head to head comparison)
+
+**A note about relational/non relational databases:**
+
+The relational databases held the leadership for decades and at that time the choice was quite obvious, either MySQL, Oracle, or MS SQL, just to name a few. They’ve served as a basis for tons of enterprise applications, while modern apps require more diversity and scalability. Non-relational databases, like MongoDB, have appeared to meet the existing requirements and replace current relational environment.
+
+
+**Side by side comparison:**
+
+![14.png](http://c1.maroun.xyz/github_screenshots/14.png)
+
+
+**MySQL vs MongoDB: pros and cons**
+
+Comparing MongoDB vs MySQL performance is difficult, since both management systems are extremely useful and the core differences underlie their basic operations and initial approach. However, MongoDB vs MySQL is a hot argument that is going on for a while now: mature relational database against a young non-relational system. Both are open-source and easily available, as well as both systems offer commercial versions with tons of additional features.
+
+![15.png](http://c1.maroun.xyz/github_screenshots/15.png)
+
+
+**Which database to choose?**
+
+To answer the main question: “when to use MongoDB instead of MySQL?” you need to take into account your project requirements and further goals. MySQL is well-recognized for its high performance, flexibility, reliable data protection, high availability, and management ease. Proper data indexing can solve the issue with performance, facilitate interaction and ensure robustness. But if your data is unstructured and complex, or if you can’t pre-define your schema, you’d better opt for MongoDB. And what is more, if you need to handle a large volume of data and store it as documents — MongoDB will help you to meet the challenges.
+
+
+## MongoDB/MySQL Coding example
+
+**Connect to database**
+
 
 
 
