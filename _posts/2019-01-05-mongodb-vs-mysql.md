@@ -183,6 +183,8 @@ sudo dpkg -i robomongo-0.8.5-x86_64.deb
 robomongo
 ```
 
+__NB: MongoDB is available for Linux, MacOS and Windows__
+
 ![13.png](http://c1.maroun.xyz/github_screenshots/13.png)
 
 
