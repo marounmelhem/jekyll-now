@@ -50,7 +50,6 @@ Unlike RDBMS databases, MongoDB is easy to scale since it requires a lot less re
 
 **Structure of a single object is clear.**
 
-
 **No complex joins.**
 
 
@@ -124,3 +123,52 @@ sudo systemctl stop mongodb
 ```
 sudo apt-get install php-mongodb
 ```
+
+**Installing MongoDB if php is already installed**
+```
+sudo apt install php7.2-mongodb
+sudo pecl install mongodb
+sudo bash
+sudo echo "extension=mongodb.so" >> /etc/php/7.2/apache2/php.ini
+```
+
+**Installing MongoDB if php is not installed**
+```
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php7.2 libapache2-mod-php7.2 php7.2-common php-7.2-cli php7.2-mongodb php-pear php7.2-dev
+```
+
+![10.png](http://c1.maroun.xyz/github_screenshots/10.png)
+
+**Restart apache2**
+```
+sudo apachectl restart
+```
+
+**Verify MongoDB installation by adding phpinfo file**
+```
+sudo vim /var/www/html/info.php
+```
+
+**Add phpinfo function**
+```
+<?php
+phpinfo();
+?>
+```
+
+**Save created file ":x!" command**
+![11.png](http://c1.maroun.xyz/github_screenshots/11.png)
+
+
+## MongoDB tools you should use
+
+If you usually use MySQL you're probably know tools like __phpmyadmin__. It's the easiest way to manage MySQL data on the server.
+
+Well, for MongoDB, similar tools are already available! And here's how you install it:
+
+
+
+
