@@ -65,22 +65,22 @@ Unlike RDBMS databases, MongoDB is easy to scale since it requires a lot less re
 
 **Login via ssh**
 
-![1.png]({{site.baseurl}}/_posts/1.png)
+![1.png](http://c1.maroun.xyz/github_screenshots/1.png)
 
 
 **Create site folder and configure permissions**
 
-![3.png]({{site.baseurl}}/_posts/3.png)
+![3.png](http://c1.maroun.xyz/github_screenshots/3.png)
 
 
 **Create site conf in /etc/apache2/sites-available**
 
-![5.png]({{site.baseurl}}/_posts/5.png)
+![5.png](http://c1.maroun.xyz/github_screenshots/5.png)
 
 
 **Enable site in /etc/apache2/sites-available**
 
-![7.png]({{site.baseurl}}/_posts/7.png)
+![7.png](http://c1.maroun.xyz/github_screenshots/7.png)
 
 
 **Updating packages**
