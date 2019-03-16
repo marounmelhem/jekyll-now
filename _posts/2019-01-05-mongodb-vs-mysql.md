@@ -163,11 +163,27 @@ phpinfo();
 ![11.png](http://c1.maroun.xyz/github_screenshots/11.png)
 
 
+**Verify MongoDB installation from phpinfo (website.com/info.php)**
+![12.png](http://c1.maroun.xyz/github_screenshots/12.png)
+
+
 ## MongoDB tools you should use
 
 If you usually use MySQL you're probably know tools like __phpmyadmin__. It's the easiest way to manage MySQL data on the server.
 
-Well, for MongoDB, similar tools are already available! And here's how you install it:
+Well, for MongoDB, there's a tool called RoboMongo and here's how you install it:
+
+```
+wget https://download.robomongo.org/0.8.5/linux/robomongo-0.8.5-x86_64.deb
+```
+```
+sudo dpkg -i robomongo-0.8.5-x86_64.deb
+```
+```
+robomongo
+```
+
+![13.png](http://c1.maroun.xyz/github_screenshots/13.png)
 
 
 
