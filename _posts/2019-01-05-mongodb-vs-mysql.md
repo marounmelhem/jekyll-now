@@ -188,10 +188,8 @@ robomongo
 ```
 
 __NB:__
-
-__-MongoDB est disponible pour Linux, MacOS et Windows__
-
-__-Une autre option pouvant être utilisée est MongoDB Compass__
+__- MongoDB est disponible pour Linux, MacOS et Windows__
+__- Une autre option pouvant être utilisée est MongoDB Compass__
 
 ![13.png](http://c1.maroun.xyz/github_screenshots/13.png)
 
