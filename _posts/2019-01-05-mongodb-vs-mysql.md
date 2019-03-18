@@ -275,3 +275,18 @@ https://github.com/datacharmer/test_db
 
 
 **Setting up on MongoDB and importing test DB**
+
+For MongoDB it's actually easier to import the test DB, you can find one through:
+
+```
+http://media.mongodb.org/zips.json
+```
+
+Download it and add it to your desktop (or to any location you desire).
+
+```
+cd ~/Desktop
+mongoimport -v --file=zips.json
+```
+
+![18.png](http://c1.maroun.xyz/github_screenshots/18.png)
