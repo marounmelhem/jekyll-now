@@ -1,123 +1,120 @@
 ---
 published: true
 ---
-_As per the official MongoDB documentation_
+_Selon la documentation officielle de MongoDB_
 
-> _ MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need_
-
-
-**How does MongoDB work?**
-
-> MongoDB stores data in flexible, JSON-like documents, meaning fields can vary from document to document and data structure can be changed over time__
+> _MongoDB est une base de données de documents dotée de l’évolutivité et de la flexibilité souhaitées pour les requêtes et l’indexation dont vous avez besoin._
 
 
-**What are the alternatives?**
+**Comment fonctionne MongoDB?**
 
-When choosing a database for your project, one of the biggest and most important decision is picking a relational (SQL) or non-relational (noSQL) data structure.
-
-While both options can get the job done, there are mentionable key differences that each developer must keep in mind.
+> _MongoDB stocke les données dans des documents flexibles de type JSON, ce qui signifie que les champs peuvent varier d'un document à l'autre et que la structure des données peut être modifiée au fil du temps._
 
 
+**Quelles sont les alternatives?**
 
-**What we'll be talking about?**
+Lors du choix d'une base de données pour votre projet, l'une des décisions les plus importantes et les plus importantes est de choisir une structure de données relationnelle (SQL) ou non relationnelle (noSQL).
 
-- What are the benefits of using MongoDB
-- How to setup MongoDB on Ubuntu 16.04 (using php)
-- MongoDB tools you should use
-- Let's talk about mySQL
+Bien que les deux options permettent de faire le travail, il existe de nombreuses différences clés que chaque développeur doit garder à l'esprit.
+
+
+**De quoi on va parler?**
+
+- Quels sont les avantages d'utiliser MongoDB?
+- Comment configurer MongoDB sur Ubuntu 16.04 (en utilisant php)
+- Les outils MongoDB à utiliser
+- Parlons de MySQL
 - MongoDB vs MySQL
-- MongoDB/MySQL Coding example
+- Exemple de codage MongoDB / MySQL
 
 
-## What are the benefits of using MongoDB
+## Quels sont les avantages d'utiliser MongoDB?
 
-**MongoDB's schema less nature**
+**MongoDB schema less nature**
 
-MongoDB is a document database in which one collection holds different documents. Number of fields, content and size of the document can differ from one document to another.
-
-
-**Ease of scale-out**
-
-Unlike RDBMS databases, MongoDB is easy to scale since it requires a lot less resources.
+MongoDB est une base de données de documents dans laquelle une collection contient différents documents. Le nombre de champs, le contenu et la taille du document peuvent différer d'un document à l'autre.
 
 
-**Structure of a single object is clear.**
+**Facilité d'évolution**
 
-**No complex joins.**
-
-
-**Deep query-ability. MongoDB supports dynamic queries on documents using a document-based query language that's nearly as powerful as SQL.**
+Contrairement aux bases de données SGBDR, MongoDB est facile à mettre à l'échelle car il nécessite beaucoup moins de ressources.
 
 
-**Uses internal memory for storing the (windowed) working set, enabling faster access of data.**
+**La structure d'un seul objet est claire.**
+
+**Aucune jointure complexe.**
+
+**Capacité de requête profonde. MongoDB prend en charge les requêtes dynamiques sur des documents en utilisant un langage de requête basé sur les documents presque aussi puissant que SQL.**
+
+**Utilise la mémoire interne pour stocker le groupe de travail (fenêtré), permettant un accès plus rapide aux données.**
 
 
+## Comment configurer MongoDB sur Ubuntu 16.04 (en utilisant php)
 
-## How to setup MongoDB on Ubuntu 16.04 (using php)
-
-**Login via ssh**
+**Connexion via ssh**
 
 ![1.png](http://c1.maroun.xyz/github_screenshots/1.png)
 
 
-**Create site folder and configure permissions**
+**Créer un dossier de site et configurer les autorisations**
 
 ![3.png](http://c1.maroun.xyz/github_screenshots/3.png)
 
 
-**Create site conf in /etc/apache2/sites-available**
+**Créer un site conf dans /etc/apache2/sites-available**
 
 ![5.png](http://c1.maroun.xyz/github_screenshots/5.png)
 
 
-**Enable site in /etc/apache2/sites-available**
+**Activer le site dans /etc/apache2/sites-available**
 
 ![7.png](http://c1.maroun.xyz/github_screenshots/7.png)
 
 
-**Updating packages**
+**Mise à jour des packages**
 
 ```
 sudo apt update
 ```
 
-**INSTALL MONGODB**
+**Installer MongoDB**
 
 ```
 sudo apt install -y mongodb
 ```
 
-**Verifying the service and database**
+**Vérification du service et de la base de données**
 
 ```
 sudo systemctl status mongodb
 ```
 
-**Starting MongoDB**
+**Démarrer MongoDB**
 
 ```
 sudo systemctl start mongodb
 ```
 
-**Restarting MongoDB**
+**Redémarrage de MongoDB**
 
 ```
 sudo systemctl restart mongodb
 ```
 
-**Stopping MongoDB**
+**Arrêt de MongoDB**
 
 ```
 sudo systemctl stop mongodb
 ```
 
-**Installing MongoDB php extension**
+**Installer l'extension MongoDB php**
 
 ```
 sudo apt-get install php-mongodb
 ```
 
-**Installing MongoDB if php is already installed**
+**Installer MongoDB si php est déjà installé**
+
 ```
 sudo apt install php7.2-mongodb
 sudo pecl install mongodb
@@ -125,7 +122,8 @@ sudo bash
 sudo echo "extension=mongodb.so" >> /etc/php/7.2/apache2/php.ini
 ```
 
-**Installing MongoDB if php is not installed**
+**Installer MongoDB si php n'est pas installé**
+
 ```
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
@@ -135,34 +133,37 @@ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-common php-7.2-cli php7.2-m
 
 ![10.png](http://c1.maroun.xyz/github_screenshots/10.png)
 
-**Restart apache2**
+**Redémarrer apache2**
+
 ```
 sudo apachectl restart
 ```
 
-**Verify MongoDB installation by adding phpinfo file**
+**Vérifiez l'installation de MongoDB en ajoutant un fichier phpinfo**
+
 ```
 sudo vim /var/www/html/info.php
 ```
 
-**Add phpinfo function**
+**Ajouter la fonction phpinfo**
+
 ```
 <?php
 phpinfo();
 ?>
 ```
 
-**Save created file ":x!" command**
+**Enregistrer le fichier créé ": x!" commander**
 ![11.png](http://c1.maroun.xyz/github_screenshots/11.png)
 
 
-**Verify MongoDB installation from phpinfo (website.com/info.php)**
+**Vérifier l'installation de MongoDB à partir de phpinfo (website.com/info.php)**
 ![12.png](http://c1.maroun.xyz/github_screenshots/12.png)
 
 
-**INSTALL MONGODB (For Mac OSX users)**
+**Installer MongoDB (pour les utilisateurs Mac OSX)**
 
-If you don't have brew installed, you should:
+Si vous n'avez pas installé de bière, vous devriez:
 https://brew.sh/
 
 ```
@@ -170,11 +171,11 @@ brew update
 brew install mongodb
 ```
 
-## MongoDB tools you should use
+## Les outils MongoDB à utiliser
 
-If you usually use MySQL you're probably know tools like __phpmyadmin__. It's the easiest way to manage MySQL data on the server.
+Si vous utilisez habituellement MySQL, vous connaissez probablement des outils tels que __phpmyadmin__. C'est le moyen le plus simple de gérer les données MySQL sur le serveur.
 
-Well, for MongoDB, there's a tool called RoboMongo and here's how you install it:
+Eh bien, pour MongoDB, il existe un outil appelé RoboMongo et voici comment vous l'installez:
 
 ```
 wget https://download.robomongo.org/0.8.5/linux/robomongo-0.8.5-x86_64.deb
@@ -187,66 +188,65 @@ robomongo
 ```
 
 __NB:__
-__-MongoDB is available for Linux, MacOS and Windows__
-__-Another option that can be used is MongoDB Compass__
+__-MongoDB est disponible pour Linux, MacOS et Windows__
+__-Une autre option pouvant être utilisée est MongoDB Compass__
 
 ![13.png](http://c1.maroun.xyz/github_screenshots/13.png)
 
 
-**Compass on Mac OSX example**
+**Exemple Compass sur Mac OSX**
 ![18.png](http://c1.maroun.xyz/github_screenshots/18.png)
 
 
-## Let's talk about MySQL
+## Parlons de MySQL
 
-**A note about SQL**
+**Une note à propos de SQL**
 
-SQL on the other hand stands for structured query language.
+Le code SQL, quant à lui, représente un langage de requête structuré.
 
-SQL is the standardized language used to access the database.
+SQL est le langage normalisé utilisé pour accéder à la base de données.
 
-SQL contains three parts:
+SQL contient trois parties:
 
-- Data definition language includes statements that help you define the database and its objects, e.g., tables, views, triggers, stored procedures, etc.
-- Data manipulation language contains statements that allow you to update and query data.
-- Data control language allows you to grant the permissions to a user to access specific data in the database.
+- Le langage de définition de données comprend des instructions qui vous aident à définir la base de données et ses objets, par exemple des tables, des vues, des déclencheurs, des procédures stockées, etc.
+- Le langage de manipulation de données contient des instructions permettant de mettre à jour et d'interroger des données.
+- Le langage de contrôle des données vous permet d'accorder les autorisations à un utilisateur pour accéder à des données spécifiques de la base de données.
 
-**What about MySQL?**
+**Qu'en est-il de MySQL?**
 
-MySQL is a full-featured open-source relational database management system (RDBMS) that was originally built by MySQL AB and currently owned by Oracle Corporation. It stores data in tables that are grouped into a database, uses Structured Query Language (SQL) to access data and such commands as ‘SELECT’, ‘UPDATE’, ‘INSERT’ and ‘DELETE’ to manage it. Related information can be stored in different tables, but the usage of JOIN operation allows you to correlate it, perform queries across various tables and minimize the chance of data duplication.
+MySQL est un système de gestion de base de données relationnelle (SGBDR) à source ouverte et complète, initialement créé par MySQL AB et actuellement détenu par Oracle Corporation. Il stocke les données dans des tables regroupées dans une base de données, utilise le langage SQL (Structured Query Language) pour accéder aux données et des commandes telles que «SELECT», «UPDATE», «INSERT» et «DELETE» pour le gérer. Les informations associées peuvent être stockées dans différentes tables, mais l'utilisation de l'opération JOIN vous permet de les corréler, d'effectuer des requêtes sur différentes tables et de minimiser les risques de duplication de données.
 
-MySQL is compatible with nearly all operating systems, namely Windows, Linux, Unix, Apple, FreeBSD and many others. It supports various storage engines, like InnoDB (it is the default one), Federated, MyISAM, Memory, CSV, Archive, Blackhole and Merge.
-
-
-## MongoDB vs MySQL (head to head comparison)
-
-**A note about relational/non relational databases:**
-
-The relational databases held the leadership for decades and at that time the choice was quite obvious, either MySQL, Oracle, or MS SQL, just to name a few. They’ve served as a basis for tons of enterprise applications, while modern apps require more diversity and scalability. Non-relational databases, like MongoDB, have appeared to meet the existing requirements and replace current relational environment.
+MySQL est compatible avec presque tous les systèmes d'exploitation, à savoir Windows, Linux, Unix, Apple, FreeBSD et beaucoup d'autres. Il supporte divers moteurs de stockage, tels que InnoDB (par défaut), Federated, MyISAM, Memory, CSV, Archive, Blackhole et Merge.
 
 
-**Side by side comparison:**
+## MongoDB vs MySQL
+
+**Une note sur les bases de données relationnelles / non relationnelles:**
+
+Les bases de données relationnelles ont tenu le leadership pendant des décennies et à ce moment-là, le choix était évident: MySQL, Oracle ou MS SQL, pour n'en nommer que quelques-uns. Elles ont servi de base à des tonnes d’applications d’entreprise, alors que les applications modernes exigent davantage de diversité et d’évolutivité. Les bases de données non relationnelles, telles que MongoDB, semblent répondre aux exigences existantes et remplacer l'environnement relationnel actuel.
+
+**Comparaison côte à côte:**
 
 ![14.png](http://c1.maroun.xyz/github_screenshots/14.png)
 
 
-**MySQL vs MongoDB: pros and cons**
+**MySQL vs MongoDB: avantages et inconvénients**
 
-Comparing MongoDB vs MySQL performance is difficult, since both management systems are extremely useful and the core differences underlie their basic operations and initial approach. However, MongoDB vs MySQL is a hot argument that is going on for a while now: mature relational database against a young non-relational system. Both are open-source and easily available, as well as both systems offer commercial versions with tons of additional features.
+Il est difficile de comparer les performances de MongoDB à celles de MySQL, car les deux systèmes de gestion sont extrêmement utiles et que les différences fondamentales sous-tendent leurs opérations de base et leur approche initiale. Cependant, MongoDB vs MySQL est un argument brûlant qui dure depuis un moment maintenant: une base de données relationnelle mature contre un jeune système non relationnel. Les deux sont open-source et facilement disponibles, ainsi que les deux systèmes offrent des versions commerciales avec des tonnes de fonctionnalités supplémentaires.
 
 ![15.png](http://c1.maroun.xyz/github_screenshots/15.png)
 
 
-**Which database to choose?**
+**Quelle base de données choisir?**
 
-To answer the main question: “when to use MongoDB instead of MySQL?” you need to take into account your project requirements and further goals. MySQL is well-recognized for its high performance, flexibility, reliable data protection, high availability, and management ease. Proper data indexing can solve the issue with performance, facilitate interaction and ensure robustness. But if your data is unstructured and complex, or if you can’t pre-define your schema, you’d better opt for MongoDB. And what is more, if you need to handle a large volume of data and store it as documents — MongoDB will help you to meet the challenges.
+Pour répondre à la question principale: "Quand utiliser MongoDB au lieu de MySQL?", Vous devez tenir compte des exigences de votre projet et de vos objectifs. MySQL est reconnu pour ses hautes performances, sa flexibilité, sa protection fiable des données, sa haute disponibilité et sa facilité de gestion. Une indexation correcte des données peut résoudre le problème en termes de performances, faciliter les interactions et assurer la robustesse. Mais si vos données sont complexes et non structurées, ou si vous ne pouvez pas prédéfinir votre schéma, vous feriez mieux d’opter pour MongoDB. De plus, si vous devez gérer un grand volume de données et les stocker sous forme de documents, MongoDB vous aidera à relever les défis.
 
 
-## MongoDB/MySQL Coding example
+## Exemple de codage MongoDB / MySQL
 
-**Setting up on MySQL and importing test DB**
+**Configuration sur MySQL et importation de la base de test**
 
-In order to code our own testing environment (for both mongoDB and mysql), we need a sample database. We're gonna use MySQL's default one:
+Afin de coder notre propre environnement de test (pour mongoDB et mysql), nous avons besoin d’un exemple de base de données. Nous allons utiliser celui par défaut de MySQL:
 
 https://github.com/datacharmer/test_db
 
@@ -257,26 +257,26 @@ https://github.com/datacharmer/test_db
 ![16.png](http://c1.maroun.xyz/github_screenshots/16.png)
 
 
-**Verify MySQL database import**
+**Vérifier l'importation de la base de données MySQL**
 
 ![17.png](http://c1.maroun.xyz/github_screenshots/17.png)
 
 
-**Setting up on MongoDB and importing test DB**
+**Configuration sur MongoDB et importation de la base de test**
 
-For MongoDB it's actually easier to import the test DB, you can find one through:
+Pour MongoDB, il est en fait plus facile d'importer la base de test, vous pouvez en trouver un par le biais:
 
 ```
 wget http://media.mongodb.org/zips.json
 mongoimport -v --file=zips.json
 ```
 
-**Verify MongoDB database import**
+**Vérifier l'importation de la base de données MongoDB**
 
 ![18.png](http://c1.maroun.xyz/github_screenshots/18.png)
 
 
-**Let's start coding! - PHP part**
+**Commençons à coder! - partie PHP**
 
 ```
 <?php
@@ -308,7 +308,7 @@ $conn->close();
 ?>
 ```
 
-**Let's start coding! - MongoDB part**
+**Commençons à coder! - partie MongoDB**
 
 ```
 <?php
