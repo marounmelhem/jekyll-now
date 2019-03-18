@@ -251,7 +251,7 @@ In order to code our own testing environment (for both mongoDB and mysql), we ne
 https://github.com/datacharmer/test_db
 
 ```
- mysql -u root -p < ~/Desktop/test_db-master/employees.sql
+ mysql -u root -p < /var/www/c1/dbs/test_db-master/employees.sql
 ```
 
 ![16.png](http://c1.maroun.xyz/github_screenshots/16.png)
@@ -267,13 +267,7 @@ https://github.com/datacharmer/test_db
 For MongoDB it's actually easier to import the test DB, you can find one through:
 
 ```
-http://media.mongodb.org/zips.json
-```
-
-Download it and add it to your desktop (or to any location you desire).
-
-```
-cd ~/Desktop
+wget http://media.mongodb.org/zips.json
 mongoimport -v --file=zips.json
 ```
 
