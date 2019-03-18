@@ -251,16 +251,11 @@ To answer the main question: “when to use MongoDB instead of MySQL?” you nee
 
 ## MongoDB/MySQL Coding example
 
-Let's start coding!
-
-**Setting up a sample database**
+**Setting up on MySQL and importing test DB**
 
 In order to code our own testing environment (for both mongoDB and mysql), we need a sample database. We're gonna use MySQL's default one:
 
 https://github.com/datacharmer/test_db
-
-
-**Setting up on MySQL and importing test DB**
 
 ```
  mysql -u root -p < ~/Desktop/test_db-master/employees.sql
@@ -289,4 +284,9 @@ cd ~/Desktop
 mongoimport -v --file=zips.json
 ```
 
+**Verify MongoDB database import**
+
 ![18.png](http://c1.maroun.xyz/github_screenshots/18.png)
+
+
+**Let's start coding!**
