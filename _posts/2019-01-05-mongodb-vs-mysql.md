@@ -282,4 +282,51 @@ mongoimport -v --file=zips.json
 ![18.png](http://c1.maroun.xyz/github_screenshots/18.png)
 
 
-**Let's start coding!**
+**Let's start coding! - PHP part**
+
+```
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "employees";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+}
+
+$table_name='employees';
+
+$sql = "SELECT emp_no, first_name, last_name FROM $table_name";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		echo "id: " . $row["emp_no"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
+	}
+} else {
+	echo "0 results";
+}
+$conn->close();
+?>
+```
+
+**Let's start coding! - MongoDB part**
+
+```
+<?php
+$m = new Mongo();
+$db = $m->selectDB('test');
+
+// MongoCollection, pasing $db and collection name
+$collection = new MongoCollection($db, 'zips');
+
+// Your query
+$cursor = $collection->find();
+var_dump($cursor);
+?>
+```
+
