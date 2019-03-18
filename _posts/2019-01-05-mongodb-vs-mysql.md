@@ -276,7 +276,7 @@ mongoimport -v --file=zips.json
 ![18.png](http://c1.maroun.xyz/github_screenshots/18.png)
 
 
-**Commençons à coder! - partie PHP**
+**Commençons à coder! - partie MySQL**
 
 ```
 <?php
