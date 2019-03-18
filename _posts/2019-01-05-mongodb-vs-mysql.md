@@ -29,13 +29,6 @@ While both options can get the job done, there are mentionable key differences t
 - MongoDB/MySQL Coding example
 
 
-
-**Is the test live?**
-
-YES! the test along with all used code can be checked through [c1.maroun.xyz](c1.maroun.xyz)
-
-
-
 ## What are the benefits of using MongoDB
 
 **MongoDB's schema less nature**
