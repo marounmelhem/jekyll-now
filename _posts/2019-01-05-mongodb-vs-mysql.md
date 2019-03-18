@@ -27,7 +27,6 @@ While both options can get the job done, there are mentionable key differences t
 - Let's talk about mySQL
 - MongoDB vs MySQL
 - MongoDB/MySQL Coding example
-- MongoDB vs MySQL live tests: speed, performance and optimization
 
 
 
@@ -168,6 +167,16 @@ phpinfo();
 ![12.png](http://c1.maroun.xyz/github_screenshots/12.png)
 
 
+**INSTALL MONGODB (For Mac OSX users)**
+
+If you don't have brew installed, you should:
+https://brew.sh/
+
+```
+brew update
+brew install mongodb
+```
+
 ## MongoDB tools you should use
 
 If you usually use MySQL you're probably know tools like __phpmyadmin__. It's the easiest way to manage MySQL data on the server.
@@ -189,6 +198,10 @@ __-MongoDB is available for Linux, MacOS and Windows__
 __-Another option that can be used is MongoDB Compass__
 
 ![13.png](http://c1.maroun.xyz/github_screenshots/13.png)
+
+
+**Compass on Mac OSX example**
+![18.png](http://c1.maroun.xyz/github_screenshots/18.png)
 
 
 ## Let's talk about MySQL
@@ -238,9 +251,27 @@ To answer the main question: “when to use MongoDB instead of MySQL?” you nee
 
 ## MongoDB/MySQL Coding example
 
-**Connect to database**
+Let's start coding!
+
+**Setting up a sample database**
+
+In order to code our own testing environment (for both mongoDB and mysql), we need a sample database. We're gonna use MySQL's default one:
+
+https://github.com/datacharmer/test_db
 
 
+**Setting up on MySQL and importing test DB**
+
+```
+ mysql -u root -p < ~/Desktop/test_db-master/employees.sql
+```
+
+![16.png](http://c1.maroun.xyz/github_screenshots/16.png)
 
 
+**Verify MySQL database import**
 
+![17.png](http://c1.maroun.xyz/github_screenshots/17.png)
+
+
+**Setting up on MongoDB and importing test DB**
